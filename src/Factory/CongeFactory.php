@@ -54,7 +54,7 @@ final class CongeFactory extends PersistentProxyObjectFactory{
             'type' => self::faker()->text(255),
             'date_debut' => self::faker()->dateTime(),
             'date_fin' => self::faker()->dateTime(),
-            'status' => self::faker()->text(255),
+            'statut' => self::faker()->text(255),
             'user' => UserFactory::new(),
         ];
     }
