@@ -46,7 +46,13 @@ Vérifiez que la base de données est bien créée et qu'il n'y a pas d'erreurs.
  symfony console doctrine:migrations:migrate
  
     ```
+Si vous souhaitez repartir sur une base propre, supprimez-la avant de la recréer :
 
+Supprimez la base :
+```bash
+
+symfony console doctrine:database:drop --force
+ ```
 2. Validez le schéma de la base de données pour vérifier qu'il est conforme :
 
     ```bash
