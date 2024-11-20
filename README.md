@@ -1,14 +1,49 @@
 
-## Atelier Symfony : Rédaction du README
+# Atelier Symfony : Rédaction du README
 
-Votre mission est de rédiger le fichier README de ce dépôt, en y incluant les instructions détaillées pour son déploiement.
+Ce projet a pour objectif de créer une application Symfony pour la gestion d'un annuaire. Ce guide détaille les étapes nécessaires pour déployer et configurer le projet.
+
+---
+
+## Installation des dépendances
+
+Assurez-vous que toutes les dépendances nécessaires sont installées :
+
+```bash
+composer install
 
 
 
+## Configuration de la base de données
+Utilisation de MySQL
+Modifiez le fichier .env.local pour définir les informations de connexion à votre base de données MySQL :
 
-![Build Status](https://img.shields.io/github/actions/workflow/status/owner/repo/ci.yml?branch=main)
-![Test Coverage](https://img.shields.io/codecov/c/github/owner/repo)
-![Total Downloads](https://img.shields.io/github/downloads/owner/repo/total)
-![License](https://img.shields.io/github/license/owner/repo)
-![Version](https://img.shields.io/github/v/release/owner/repo)
-![Stars](https://img.shields.io/github/stars/owner/repo?style=social)
+env
+Copier le code
+DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/annuaire"
+Vérifiez si MySQL est installé sur votre machine (Windows) :
+
+bash
+Copier le code
+mysql --version
+Créez la base de données avec la commande suivante :
+
+bash
+Copier le code
+symfony console doctrine:database:create
+Vérifiez que la base de données est bien créée et qu'il n'y a pas d'erreurs.
+
+
+
+## Vérification
+Générez une migration 
+
+bash
+Copier le code
+symfony console make:migration
+symfony console doctrine:migrations:migrate
+Validez le schéma de la base de données :
+
+bash
+Copier le code
+symfony console doctrine:schema:validate
