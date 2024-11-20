@@ -46,6 +46,10 @@ bash
 symfony console doctrine:migrations:generate
  symfony console doctrine:migrations:migrate
  
+Validez le schéma de la base de données avec la commande suivante :
+
+symfony console doctrine:schema:validate
+
 
 Si vous souhaitez repartir sur une base propre, supprimez-la avant de la recréer :
 
