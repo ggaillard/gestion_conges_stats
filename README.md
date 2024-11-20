@@ -45,27 +45,25 @@ php bin/console doctrine:fixtures:load
 
 ## Vérification
 
-1. Initialisez la base de données si nécessaire :
+# Créer la base de données si nécessaire
+php bin/console doctrine:database:create
 
-bash
- symfony console doctrine:database:create
-symfony console doctrine:migrations:generate
- symfony console doctrine:migrations:migrate
- 
-Validez le schéma de la base de données avec la commande suivante :
+# Générer les migrations à partir des entités
+php bin/console doctrine:migrations:generate
 
-symfony console doctrine:schema:validate
+# Appliquer les migrations pour mettre à jour la base de données
+php bin/console doctrine:migrations:migrate
 
+# Valider le schéma de la base de données
+php bin/console doctrine:schema:validate
 
-Si vous souhaitez repartir sur une base propre, supprimez-la avant de la recréer :
+# Si vous voulez repartir sur une base propre, supprimez-la et recréez-la
 
-Supprimez la base :
-bash
+# Supprimer la base de données (forcer la suppression)
+php bin/console doctrine:database:drop --force
 
-symfony console doctrine:database:drop --force
+# Recréer la base de données
+php bin/console doctrine:database:create
 
-2. Validez le schéma de la base de données pour vérifier qu'il est conforme :
-
-   bash
-    symfony console doctrine:schema:validate
-   
+# Valider à nouveau le schéma de la base de données
+php bin/console doctrine:schema:validate
