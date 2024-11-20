@@ -39,11 +39,12 @@ Vérifiez que la base de données est bien créée et qu'il n'y a pas d'erreurs.
 
 ## Vérification
 
-1. Générez une migration pour créer la table `personne` dans la base de données :
+1. Initialisez la base de données si nécessaire :
 
-    ```bash
-    symfony console make:migration
-    symfony console doctrine:migrations:migrate
+```bash
+ symfony console doctrine:database:create
+ symfony console doctrine:migrations:migrate
+ 
     ```
 
 2. Validez le schéma de la base de données pour vérifier qu'il est conforme :
