@@ -3,32 +3,17 @@
 
 Ce projet a pour objectif de créer une application Symfony pour la gestion d'un annuaire. Ce guide détaille les étapes nécessaires pour déployer et configurer le projet.
 
----
-
-Étapes pour charger /node_modules
-1. Installation des dépendances Node.js
-Assurez-vous que node et npm ou yarn sont installés sur votre machine.
-
-Installez les dépendances définies dans package.json :
-
-bash
-Copier le code
-npm install
-ou, si vous utilisez Yarn :
-
-bash
-Copier le code
-yarn install
-Cela générera automatiquement le dossier /node_modules dans votre projet.
-
-
-
-## Installation des dépendances
-
-Assurez-vous que toutes les dépendances nécessaires sont installées :
-
-```bash
+# Installation des dépendances PHP
 composer install
+
+# Installation des dépendances Node.js
+npm install # ou yarn install
+
+# Installation des assets publics
+symfony console assets:install
+
+# Nettoyage et régénération du cache
+symfony console cache:clear
 
 
 
