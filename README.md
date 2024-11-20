@@ -5,6 +5,24 @@ Ce projet a pour objectif de créer une application Symfony pour la gestion d'un
 
 ---
 
+Étapes pour charger /node_modules
+1. Installation des dépendances Node.js
+Assurez-vous que node et npm ou yarn sont installés sur votre machine.
+
+Installez les dépendances définies dans package.json :
+
+bash
+Copier le code
+npm install
+ou, si vous utilisez Yarn :
+
+bash
+Copier le code
+yarn install
+Cela générera automatiquement le dossier /node_modules dans votre projet.
+
+
+
 ## Installation des dépendances
 
 Assurez-vous que toutes les dépendances nécessaires sont installées :
