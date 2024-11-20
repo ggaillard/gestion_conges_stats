@@ -20,7 +20,7 @@ Modifiez le fichier .env.local pour définir les informations de connexion à vo
 
 env
 Copier le code
-DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/annuaire"
+DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/gestion-conges"
 Vérifiez si MySQL est installé sur votre machine (Windows) :
 
 bash
