@@ -43,6 +43,7 @@ Vérifiez que la base de données est bien créée et qu'il n'y a pas d'erreurs.
 
 ```bash
  symfony console doctrine:database:create
+symfony console doctrine:migrations:generate
  symfony console doctrine:migrations:migrate
  
     ```
