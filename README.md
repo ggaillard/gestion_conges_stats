@@ -36,6 +36,12 @@ Copier le code
 symfony console doctrine:database:create
 Vérifiez que la base de données est bien créée et qu'il n'y a pas d'erreurs.
 
+## Lancer les fixtures : 
+Une fois vos fixtures prêtes, vous pouvez les charger dans la base de données avec la commande suivante :
+
+bash
+Copier le code
+php bin/console doctrine:fixtures:load
 
 ## Vérification
 
