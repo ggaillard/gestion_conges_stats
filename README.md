@@ -22,7 +22,7 @@ Utilisation de MySQL
 Modifiez le fichier .env.local pour définir les informations de connexion à votre base de données MySQL :
 
 env
-Copier le code
+
 DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/gestion-conges"
 Vérifiez si MySQL est installé sur votre machine (Windows) :
 
@@ -41,21 +41,21 @@ Vérifiez que la base de données est bien créée et qu'il n'y a pas d'erreurs.
 
 1. Initialisez la base de données si nécessaire :
 
-```bash
+bash
  symfony console doctrine:database:create
 symfony console doctrine:migrations:generate
  symfony console doctrine:migrations:migrate
  
-    ```
+
 Si vous souhaitez repartir sur une base propre, supprimez-la avant de la recréer :
 
 Supprimez la base :
-```bash
+bash
 
 symfony console doctrine:database:drop --force
- ```
+
 2. Validez le schéma de la base de données pour vérifier qu'il est conforme :
 
-    ```bash
+   bash
     symfony console doctrine:schema:validate
-    ```
+   
