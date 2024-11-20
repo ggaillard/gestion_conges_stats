@@ -67,3 +67,4 @@ php bin/console doctrine:database:create
 
 # Valider à nouveau le schéma de la base de données
 php bin/console doctrine:schema:validate
+
